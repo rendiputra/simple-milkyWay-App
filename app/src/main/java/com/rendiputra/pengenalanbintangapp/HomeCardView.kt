@@ -31,7 +31,19 @@ class HomeCardView (private val listPlanet: ArrayList<Planet>): RecyclerView.Ada
         holder.tvName.text = planet.name
         holder.tvDetail.text = planet.detail
         val mContext = holder.itemView.context
-        holder.btnDetail.setOnClickListener { Toast.makeText(holder.itemView.context, "Share " + listPlanet[holder.adapterPosition].name, Toast.LENGTH_SHORT).show() }
+        holder.btnDetail.setOnClickListener {
+            val moveDetail = Intent(mContext, PlanetDetail::class.java)
+            moveDetail.putExtra(PlanetDetail.EXTRA_NAME, planet.name)
+            moveDetail.putExtra(PlanetDetail.EXTRA_DETAIL, planet.detail)
+            moveDetail.putExtra(PlanetDetail.EXTRA_JENIS, planet.jenis)
+            moveDetail.putExtra(PlanetDetail.EXTRA_PHOTO, planet.photo)
+            moveDetail.putExtra(PlanetDetail.EXTRA_JARIJARI, planet.jariJari)
+            moveDetail.putExtra(PlanetDetail.EXTRA_LUASPERMUKAAN, planet.luasPermukaan)
+            moveDetail.putExtra(PlanetDetail.EXTRA_VOLUME, planet.volume)
+            moveDetail.putExtra(PlanetDetail.EXTRA_MASSA, planet.massa)
+            moveDetail.putExtra(PlanetDetail.EXTRA_ATMOSFER, planet.atmosfer)
+            mContext.startActivity(moveDetail)
+        }
 
         // TODO: ngirim data list ke detail_planet.xml + PlanetDetail.kt
         holder.itemView.setOnClickListener {
