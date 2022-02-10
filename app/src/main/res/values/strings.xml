@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">Bintang dan Planet</string>
 
+    <!-- about activity-->
+    <string name="about">About</string>
+    <string name="name">Rendi Putra Pradana</string>
+    <string name="email">rendiputrapradana@gmail.com</string>
+    <string name="portofolio">Portofolio :\n</string>
+    <string name="github">Github</string>
+    <string name="linkedIn">LinkedIn</string>
+    <string name="dicoding">Dicoding</string>
+    <string name="user_github">:\t\@rendiputra</string>
+    <string name="user_linkedIn">:\t\@rendi-putra</string>
+    <string name="user_dicoding">:\t\@rendiputra</string>
+
     <!--  String Tabel  -->
     <string name="dummy_photos6">6 photos</string>
     <string name="jenis">Bintang</string>
