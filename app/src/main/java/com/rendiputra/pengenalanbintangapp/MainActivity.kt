@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         rvPlanets = findViewById(R.id.rv_planets)
         rvPlanets.setHasFixedSize(true)
 
