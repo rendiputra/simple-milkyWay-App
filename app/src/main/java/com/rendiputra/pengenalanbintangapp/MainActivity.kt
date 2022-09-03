@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setMode(selectedMode: Int) {
         when (selectedMode) {
-            R.id.miCompose -> {
+            R.id.about_page -> {
                 val about = Intent(this@MainActivity, About::class.java)
                 startActivity(about)
             }
